@@ -1,8 +1,8 @@
 package service
 
 import (
-	"cart/domain/model"
-	"cart/domain/repository"
+	"github.com/2559065/cart/domain/model"
+	"github.com/2559065/cart/domain/repository"
 )
 
 type ICartDataService interface {
@@ -19,7 +19,7 @@ type ICartDataService interface {
 
 
 //创建
-func NewCategoryDataService(categoryRepository repository.ICartRepository) ICartDataService {
+func NewCartDataService(categoryRepository repository.ICartRepository) ICartDataService {
 	return &CategoryDataService{ categoryRepository }
 }
 

@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"cart/domain/model"
 	"errors"
+	"github.com/2559065/cart/domain/model"
 	"github.com/jinzhu/gorm"
 )
 
@@ -20,7 +20,7 @@ type ICartRepository interface {
 }
 
 // 创建CategoryRespository
-func NewCategoryRepository(db *gorm.DB) ICartRepository {
+func NewCartRepository(db *gorm.DB) ICartRepository {
 	return &CartRepository{db}
 }
 
@@ -79,6 +79,7 @@ func (u *CartRepository) IncrNum(cartID int64, num int64) error {
 	return u.mysqlDb.Model(cart).UpdateColumn("num", gorm.Expr("num + ?", num)).Error
 }
 
+// 查询所有用户的购物车信息
 func (u *CartRepository) DecrNum(cartID int64, num int64) error {
 	cart := &model.Cart{ID: cartID}
 	db := u.mysqlDb.Model(cart).Where("num >= ?", num).UpdateColumn("num", gorm.Expr("num - ?", num))
