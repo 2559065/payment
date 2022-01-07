@@ -1,1 +1,1 @@
-service github.com/2559065/cart
+service github.com/2559065/payment

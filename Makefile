@@ -13,7 +13,7 @@ api:
 
 .PHONY: proto
 proto:
-	protoc --proto_path=. --micro_out=. --go_out=:. proto/cart/cart.proto
+	protoc --proto_path=. --micro_out=. --go_out=:. proto/payment/payment.proto
 
 .PHONY: build
 build:

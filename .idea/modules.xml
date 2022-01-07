@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/github.com/2559065/cart.iml" filepath="$PROJECT_DIR$/.idea/github.com/2559065/cart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/payment.iml" filepath="$PROJECT_DIR$/.idea/payment.iml" />
     </modules>
   </component>
 </project>

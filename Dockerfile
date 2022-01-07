@@ -1,3 +1,3 @@
 FROM alpine
-ADD cart /cart
-ENTRYPOINT [ "/cart" ]
+ADD payment /payment
+ENTRYPOINT [ "/payment" ]

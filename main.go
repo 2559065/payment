@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/2559065/cart/domain/repository"
-	service2 "github.com/2559065/cart/domain/service"
-	"github.com/2559065/cart/handler"
-	pb "github.com/2559065/cart/proto/cart"
 	"github.com/2559065/common"
+	"github.com/2559065/payment/domain/repository"
+	service2 "github.com/2559065/payment/domain/service"
+	"github.com/2559065/payment/handler"
+	pb "github.com/2559065/payment/proto/payment"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"github.com/micro/go-micro/debug/log"
@@ -15,6 +15,7 @@ import (
 	"github.com/micro/go-plugins/registry/consul/v2"
 	ratelimit "github.com/micro/go-plugins/wrapper/ratelimiter/uber/v2"
 	"github.com/opentracing/opentracing-go"
+
 )
 
 var QPS = 100
@@ -33,28 +34,29 @@ func main() {
 	})
 
 	// 链路追踪
-	t, io, err := common.NewTracer("go.micro.service.cart", "localhost:6831")
+	t, io, err := common.NewTracer("go.micro.service.payment", "localhost:6831")
 	if err != nil {
 		log.Error(err)
 	}
 	defer io.Close()
 	opentracing.SetGlobalTracer(t)
 
+	// 暴露监控地址
+	//common.PrometheusBoot(9089)
+
 	// Create service
 	service := micro.NewService(
-		micro.Name("go.micro.service.cart"),
+		micro.Name("go.micro.service.payment"),
 		micro.Version("latest"),
 		// 这里设置地址和需要暴露的端口
-		micro.Address("127.0.0.1:8087"),
+		micro.Address("127.0.0.1:8089"),
 		// 添加consul作为注册中心
 		micro.Registry(consulRegistry),
 		// 添加限流
 		micro.WrapHandler(ratelimit.NewHandlerWrapper(QPS)),
+		// 添加监控
+		//micro.WrapHandler(prometheus.NewHandlerWrapper()),
 	)
-
-	//只执行一次,数据表初始化
-	//rp := repository.NewUserRepository(db)
-	//rp.InitTable()
 
 	// 获取mysql配置,路径中不带前缀
 	mysqlInfo := common.GetMysqlFromConsul(consulConfig, "mysql")
@@ -68,16 +70,17 @@ func main() {
 	// 禁止复表
 	db.SingularTable(true)
 
-	//rp := repository.NewCartRepository(db)
+	//只执行一次,数据表初始化
+	//rp := repository.NewPaymentRepository(db)
 	//rp.InitTable()
 
 	// 初始化服务
 	service.Init()
 
-	categoryDataService := service2.NewCartDataService(repository.NewCartRepository(db))
+	paymentDataService := service2.NewPaymentDataService(repository.NewPaymentRepository(db))
 
 	// Register handler
-	err = pb.RegisterCartHandler(service.Server(), &handler.Cart{categoryDataService})
+	err = pb.RegisterPaymentHandler(service.Server(), &handler.Payment{paymentDataService})
 	if err != nil {
 		log.Error(err)
 	}
