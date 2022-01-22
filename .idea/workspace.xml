@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc0f109e-23f8-4bba-87fc-eeddd77f3c37" name="Changes" comment="">
+    <list default="true" id="dc0f109e-23f8-4bba-87fc-eeddd77f3c37" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,11 +35,9 @@
     <setting file="file://$PROJECT_DIR$/Makefile" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/domain/repository/payment_repository.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/proto/payment/payment.proto" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/proto/payment/payment.pb.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/handler/payment.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../gopath/pkg/mod/github.com/coreos/etcd@v3.3.18+incompatible/clientv3/balancer/picker/err.go" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/../../../gopath/pkg/mod/github.com/coreos/etcd@v3.3.18+incompatible/clientv3/balancer/resolver/endpoint/endpoint.go" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/proto/payment/payment.pb.micro.go" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="Make.Settings">
     <option name="path" value="make" />
@@ -136,7 +133,16 @@
       <workItem from="1641559803360" duration="165000" />
       <workItem from="1641560842110" duration="1538000" />
       <workItem from="1642820788203" duration="4956000" />
+      <workItem from="1642859924630" duration="886000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1642860182303</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1642860182303</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +159,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
