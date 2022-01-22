@@ -5,29 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc0f109e-23f8-4bba-87fc-eeddd77f3c37" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/payment.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/model/payment.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/repository/payment_repository.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/service/payment_data_service.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handler/payment.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proto/payment/payment.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cart.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/model/cart.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/repository/cart_repository.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/service/cart_data_service.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/cart.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micro.mu" beforeDir="false" afterPath="$PROJECT_DIR$/micro.mu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto/cart/cart.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto/cart/cart.pb.micro.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/proto/cart/cart.proto" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +134,8 @@
       <workItem from="1641191679192" duration="9650000" />
       <workItem from="1641218935787" duration="3491000" />
       <workItem from="1641559803360" duration="165000" />
-      <workItem from="1641560842110" duration="667000" />
+      <workItem from="1641560842110" duration="1538000" />
+      <workItem from="1642820788203" duration="4956000" />
     </task>
     <servers />
   </component>

@@ -27,7 +27,7 @@ message PaymentInfo {
 	string payment_name = 2;
 	string payment_sid = 3;
 	bool payment_status = 4;
-	string PaymentImage = 5;
+	string payment_image = 5;
 }
 
 message PaymentID {

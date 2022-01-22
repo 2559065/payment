@@ -15,17 +15,16 @@ import (
 	"github.com/micro/go-plugins/registry/consul/v2"
 	ratelimit "github.com/micro/go-plugins/wrapper/ratelimiter/uber/v2"
 	"github.com/opentracing/opentracing-go"
-
 )
 
 var QPS = 100
 
 func main() {
 	// 配置中心
-	consulConfig, err := common.GetConsulConfig("127.0.0.1", 8500, "/micro/config")
-	if err != nil {
-		log.Error(err)
-	}
+	//consulConfig, err := common.GetConsulConfig("127.0.0.1", 8500, "/micro/config")
+	//if err != nil {
+	//	log.Error(err)
+	//}
 	// 注册中心
 	consulRegistry := consul.NewRegistry(func(options *registry.Options) {
 		options.Addrs = []string{
@@ -59,9 +58,9 @@ func main() {
 	)
 
 	// 获取mysql配置,路径中不带前缀
-	mysqlInfo := common.GetMysqlFromConsul(consulConfig, "mysql")
+	//mysqlInfo := common.GetMysqlFromConsul(consulConfig, "mysql")
 	// 连接数据库
-	db, err := gorm.Open("mysql", mysqlInfo.User + ":" + mysqlInfo.Pwd + "@/" + mysqlInfo.Database + "?charset=utf8&parseTime=True&loc=Local")
+	db, err := gorm.Open("mysql", "root:root@/micro?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
 		log.Error(err)
 	}
